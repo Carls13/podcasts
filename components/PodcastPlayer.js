@@ -1,26 +1,19 @@
-import 'isomorphic-fetch'
 import Link from 'next/link'
-import Layout from '../components/Layout'
 
-export default class extends React.Component {
+export default class PodcastPlayer extends React.Component {
+	render(){
 
-  static async getInitialProps ({ query }) {
-    let id = query.id
-    let fetchClip = await fetch(`https://api.audioboom.com/audio_clips/${id}.mp3`)
-    let clip = (await fetchClip.json()).body.audio_clip
-    return { clip }
-  }
+		const { clip, onClose } = this.props
 
-  render() {
-    const { clip } = this.props
-
-    return <Layout title={clip.title}>
-      <div className='modal'>
-        <div className='clip'>
+		return <div className='clip'>
           <nav>
+          {
+          	onClose ? <a onClick={onClose}>&lt; Volver</a>
+          	:
             <Link href={`/channel?id=${clip.channel.id}`}>
               <a className='close'>&lt; Volver</a>
             </Link>
+          }
           </nav>
 
           <picture>
@@ -34,10 +27,8 @@ export default class extends React.Component {
               <source src={clip.urls.high_mp3} type='audio/mpeg' />
             </audio>
           </div>
-        </div>
-      </div>
 
-      <style jsx>{`
+          <style jsx>{`
         nav {
           background: none;
         }
@@ -52,7 +43,7 @@ export default class extends React.Component {
           display: flex;
           height: 100%;
           flex-direction: column;
-          background: #8756ca;
+          background: #35159A;
           color: white;
         }
         picture {
@@ -97,7 +88,8 @@ export default class extends React.Component {
           z-index: 99999;
         }
       `}</style>
+        </div>
 
-    </Layout>
-  }
+	}
+
 }
