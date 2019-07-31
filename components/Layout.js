@@ -17,19 +17,42 @@ export default class Layout extends React.Component{
 
 		return <div>
 			<Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/static/logo.png" />
 				<title>{title}</title>
 			</Head>
 			<header>
-				<Link href="/"><a>Podcasts</a></Link>
+				<Link href="/">
+          <div className="home-link">
+            <a>Podcasts</a>
+          </div>
+        </Link>
+        <Link href="/">
+        <div className="about-link">
+        <a>About</a>
+        </div></Link>
 			</header>
 			{ children }
 			<style jsx>{`
 				header {
 		          color: #fff;
-		          background: #35159A;
+		          background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(4,2,59,1) 100%);
 		          padding: 15px;
-		          text-align: center;
+              display: flex;
 		        }
+
+            .home-link a, .about-link a{
+              cursor: pointer;
+            }
+
+            .home-link{
+              width: 80%;
+            }
+
+            .about-link{
+              width: 20%;
+              text-align: right;
+            }
 
 		        header a{
 		        	color: #fff;

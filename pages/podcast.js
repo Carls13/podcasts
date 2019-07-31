@@ -52,7 +52,7 @@ export default class extends React.Component {
           display: flex;
           height: 100%;
           flex-direction: column;
-          background: #8756ca;
+          background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(4,2,59,1) 100%);
           color: white;
         }
         picture {
@@ -76,10 +76,10 @@ export default class extends React.Component {
           background: rgba(0,0,0,0.3);
           text-align: center;
         }
-        h3 {
+        .player h3 {
           margin: 0;
         }
-        h6 {
+        .player h6 {
           margin: 0;
           margin-top: 1em;
         }

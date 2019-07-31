@@ -27,6 +27,7 @@ export default class extends React.Component {
           cursor: pointer;
         }
         .podcast:hover {
+          font-size: 3em;
           color: #000;
         }
         .podcast h3 {
@@ -35,7 +36,6 @@ export default class extends React.Component {
         .podcast .meta {
           color: #666;
           margin-top: 0.5em;
-          font-size: 0.8em;
         }
       `}</style>
     </div>

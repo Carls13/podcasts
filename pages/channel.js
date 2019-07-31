@@ -76,7 +76,7 @@ export default class extends React.Component {
 
       </div>}
 
-        <h1>{ channel.title }</h1>
+        <h1 className="channel-title">{ channel.title }</h1>
 
         { series.length > 0 &&
         <div>
@@ -87,7 +87,7 @@ export default class extends React.Component {
         </div>
       }
 
-      <h2>Últimos Podcasts</h2>
+      <h2 className="last-podcasts">Últimos Podcasts</h2>
       <PodcastListWithClick podcasts={audioClips} onClickPodcast={this.openPodcast}/>
     
       <style jsx>{`
@@ -100,11 +100,11 @@ export default class extends React.Component {
           background-color: #aaa;
         }
 
-        h1 {
+        .channel-title{
           font-weight: 600;
           padding: 15px;
         }
-        h2 {
+        .last-podcasts {
           padding: 5px;
           font-size: 0.9em;
           font-weight: 600;
