@@ -4,7 +4,7 @@ App de Podcasts integrada con la API de Audioboom, implementada con Next.js.
 
 ![Preview](./.readme-static/preview.png)
 
-[Ver la app]()
+[Ver la app](https://podcasts-player.herokuapp.com/)
 
 ## ¿Cómo funciona?
 
