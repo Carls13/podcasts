@@ -19,6 +19,7 @@ export default class Layout extends React.Component{
 			<Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" type="image/x-icon" href="/static/logo.png" />
+        <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet"/>
 				<title>{title}</title>
 			</Head>
 			<header>
@@ -27,10 +28,11 @@ export default class Layout extends React.Component{
             <a>Podcasts</a>
           </div>
         </Link>
-        <Link href="/">
-        <div className="about-link">
-        <a>About</a>
-        </div></Link>
+        <Link href="/about">
+          <div className="about-link">
+            <a>About</a>
+          </div>
+        </Link>
 			</header>
 			{ children }
 			<style jsx>{`
@@ -64,7 +66,7 @@ export default class Layout extends React.Component{
 			<style jsx global>{`
         body {
           margin: 0;
-          font-family: system-ui;
+          font-family: 'Blinker';
           background: white;
         }
 
