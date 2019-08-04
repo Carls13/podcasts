@@ -81,9 +81,7 @@ export default class extends React.Component {
         { series.length > 0 &&
         <div>
           <h2>Series</h2>
-          <div className="channels">
             <ChannelGrid channels={series}/>
-          </div>
         </div>
       }
 
