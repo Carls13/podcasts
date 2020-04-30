@@ -18,7 +18,13 @@ export default class Layout extends React.Component{
 		return <div>
 			<Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="shortcut icon" type="image/x-icon" href="/static/logo.png" />
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_ES" />
+        <meta property="og:description" content="Aplicación para escuchar podcasts desarrollada por Carlos Hernández" />
+        <link rel="manifest" href="./../static/manifest.json" />
+        <meta name="theme-color" content="#061280"/>
+        <link rel="shortcut icon" href="./../static/logo.png" />
         <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet"/>
 				<title>{title}</title>
 			</Head>
